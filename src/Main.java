@@ -37,5 +37,17 @@ public class Main {
             default:
                 System.out.println("Приложение банка работает только на iOS или Android");
         }
+
+        System.out.println("\nЗадание 3");
+
+        int year = 2021;
+        boolean leapYear = (year > 1584 && (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0));
+
+        if (leapYear) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
+        }
+
     }
 }
