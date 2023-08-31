@@ -18,17 +18,18 @@ public class Main {
         System.out.println("\nЗадание 2");
 
         int clientDeviceYear = 2015;
+        boolean oldVersion = clientDeviceYear < 2015;
 
         switch (clientOS) {
             case 0:
-                if (clientDeviceYear < 2015) {
+                if (oldVersion) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 } else {
                     System.out.println("Установите версию приложения для iOS по ссылке");
                 }
                 break;
             case 1:
-                if (clientDeviceYear < 2015) {
+                if (oldVersion) {
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
                 } else {
                     System.out.println("Установите версию приложения для Android по ссылке");
@@ -49,5 +50,34 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
 
-    }
-}
+        System.out.println("\nЗадание 4");
+
+        int deliveryDistance = 95;
+        int deliveryDays = 1;
+        char result = 0;
+
+        if (deliveryDistance < 20) {
+            result = 'a';
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            result = 'b';
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+            result = 'c';
+        }
+        switch (result) {
+            case 'a':
+                System.out.println("Потребуется дней: " + deliveryDays);
+                break;
+            case 'b':
+                deliveryDays++;
+                System.out.println("Потребуется дней: " + deliveryDays);
+                break;
+            case 'c':
+                deliveryDays++;
+                deliveryDays++;
+                System.out.println("Потребуется дней: " + deliveryDays);
+                break;
+            default:
+                System.out.println("Свыше 100 км доставки нет");
+        }
+            }
+        }
